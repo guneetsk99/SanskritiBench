@@ -139,7 +139,7 @@ with col2:
     st.markdown("""
         <div class="text">
         <strong>Industry:</strong><br>
-        - Daniel van Strien, Hugging Face
+        - Daniel van Strien, Hugging Face<br>
         - Dr. Shantipriya Parida, Silo AI<br>
         - Anindyadeep Sannigrahi, Prem AI<br>
         <br>
