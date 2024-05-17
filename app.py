@@ -81,7 +81,7 @@ st.markdown("""
 st.markdown('<div class="subheader">Motivation and Process</div>', unsafe_allow_html=True)
 st.markdown("""
     <div class="text">
-    The project is a human-driven initiative with no involvement of synthetic augmentation or generation at the current stage. Our goal is to ensure cultural accuracy and depth in NLP models by creating an Indic Cultural Benchmark. The process involves forming questions about the state across various categories. Context can change drastically for different states, highlighting the rich diversity of India. For instance:
+     Our goal is to ensure cultural accuracy and depth in NLP models by creating an Indic Cultural Benchmark. The process involves forming questions about the state across various categories. Context can change drastically for different states, highlighting the rich diversity of India. For instance:
     <ul>
         <li><strong>Geographical Features:</strong> The geography of Kerala, with its backwaters and coastal line, contrasts sharply with the deserts of Rajasthan.</li>
         <li><strong>Demographics:</strong> The linguistic diversity of Karnataka, with Kannada as the official language, differs from the multilingual population of Delhi, where Hindi, Punjabi, and Urdu are commonly spoken.</li>
@@ -102,6 +102,7 @@ st.markdown("""
         <li>Hindi poems often employ rich figurative language to express deep emotions and cultural narratives, as evident in the works of poets like Kabir and Tulsidas.</li>
     </ul>
     By understanding and integrating these elements, we aim to enhance NLP models to better interpret and generate culturally rich and contextually accurate content.
+    In parallel, our team will also be working on development of preference datasets for these languages.
     </div>
 """, unsafe_allow_html=True)
 st.markdown('<div class="subheader">Example</div>', unsafe_allow_html=True)
