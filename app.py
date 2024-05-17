@@ -146,7 +146,6 @@ with col2:
         <strong>Academia:</strong><br>
         - Dr. Satya Ranjan Dash, Associate Professor, KIIT University<br>
         - Dr. Prashant Singh Rana, Assistant Professor, Thapar University<br>
-        - Aseem Srivastava, PhD, IIIT Delhi<br>
         <br>
         </div>
     """, unsafe_allow_html=True)
