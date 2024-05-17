@@ -71,7 +71,8 @@ st.image("img/logo.png", caption="SanskritiBench Icon", use_column_width=True)
 st.markdown('<div class="subheader">Abstract</div>', unsafe_allow_html=True)
 st.markdown("""
     <div class="text">
-    The aim of the project is to develop a state-of-the-art Indian Cultural benchmark that can test these models for their cultural accuracies, especially in a country like India which is rich in diversity. With Hugging Face support, our aim is to expand the benchmark into an alignment dataset and release it.<br>
+    The aim of the project is to develop a state-of-the-art Indian Cultural benchmark that can test these models for their cultural accuracies, especially in a country like India which is rich in diversity. 
+    With Hugging Face initiative of DATA-IS-BETTER-TOGETHER, our aim is to expand the benchmark into an alignment dataset and release it for preference tuning tasks.<br>
     We will be covering the official languages of India and their corresponding dialects. This is a community-driven project and your support and collaboration can make this initiative a success.
     </div>
 """, unsafe_allow_html=True)
@@ -137,6 +138,7 @@ with col2:
     st.markdown("""
         <div class="text">
         <strong>Industry:</strong><br>
+        - Daniel van Strien, Hugging Face
         - Dr. Shantipriya Parida, Silo AI<br>
         - Anindyadeep Sannigrahi, Prem AI<br>
         <br>
