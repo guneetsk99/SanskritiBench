@@ -103,7 +103,8 @@ st.markdown("""
     By understanding and integrating these elements, we aim to enhance NLP models to better interpret and generate culturally rich and contextually accurate content.
     </div>
 """, unsafe_allow_html=True)
-
+st.markdown('<div class="subheader">Example</div>', unsafe_allow_html=True)
+st.image("img/example.png", caption="Understanding the gaps", use_column_width=True)
 # Goals and Milestones section
 st.markdown('<div class="subheader">Goals and Milestones</div>', unsafe_allow_html=True)
 st.markdown("""
