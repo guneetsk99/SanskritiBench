@@ -1,18 +1,9 @@
 import streamlit as st
-import plotly.graph_objects as go
 import pandas as pd
-import random
+
 # Custom CSS for styling
-languages = ["Assamese", "Bengali", "Gujarati", "Hindi", "Kannada", "Kashmiri", "Konkani", "Malayalam", "Manipuri", "Marathi", "Odia", "Punjabi", "Sanskrit", "Tamil", "Telugu"]
-dataset_strength = [random.randint(1000, 10000) for _ in range(len(languages))]
-progress = [random.randint(0, 100) for _ in range(len(languages))]
-managers = ["Join us", "Manager Name", "Join us", "Manager Name", "Join us", "Join us", "Manager Name", "Join us", "Join us", "Join us", "Join us", "Join us", "Join us", "Manager Name", "Join us"]
-df = pd.DataFrame({
-    "Language": languages,
-    "Dataset Strength": dataset_strength,
-    "Progress": progress,
-    "Program Managers": managers
-})
+
+df = pd.read_csv("data.csv")
 
 st.markdown("""
     <style>
@@ -42,6 +33,17 @@ st.markdown("""
         .partner-logo {
             max-width: 150px;
             max-height: 100px;
+        }
+        .contact {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #1C2833;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .contact-info {
+            font-weight: bold;
+            color: #2874A6;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -91,10 +93,10 @@ with col2:
         <div class="text">
         <strong>Industry:</strong><br>
         - Dr. Shantipriya Parida, Silo AI<br>
-        - Anindya Sannigarhi, Prem AI<br>
+        - Anindyadeep Sannigrahi, Prem AI<br>
         <br>
         <strong>Academia:</strong><br>
-        - Dr. Sathya Ranjan , Assistant Professor, KIIT<br>
+        - Dr. Sathya Ranjan , Assistant Professor, KIIT University<br>
         - Dr. Prashant Singh Rana, Assistant Professor, Thapar University<br>
         - Aseem Srivastava, PhD, IIIT Delhi<br>
         <br>
@@ -121,31 +123,37 @@ st.dataframe(
         "Program Managers": "Program Managers"
     },
     hide_index=True,
+    use_container_width=True,
+    height=600
 )
-
-# Create a table to display the data in a more detailed manner
-st.markdown('<div class="subheader">Language Progress and Managers</div>', unsafe_allow_html=True)
-
-# Display the data in a tabular format with progress bars
-for i in range(len(df)):
-    col1, col2, col3, col4 = st.columns([2, 2, 2, 2])
-    with col1:
-        st.write(df.loc[i, "Language"])
-    with col2:
-        st.write(df.loc[i, "Dataset Strength"])
-    with col3:
-        st.progress(df.loc[i, "Progress"])
-    with col4:
-        st.write(df.loc[i, "Program Managers"])
 
 # Project partner section
 st.markdown('<div class="subheader">Project Partners</div>', unsafe_allow_html=True)
 st.markdown('<div class="text">Our Partners:</div>', unsafe_allow_html=True)
-partners = ["img/huggingFace.png"]
+partners = ["img/supporters.png"]
 cols = st.columns(len(partners))
 for col, partner in zip(cols, partners):
     col.image(partner, use_column_width=True, caption="Partner Logo")
 
-# Contact us or join us section
+st.markdown('<div class="center-content">', unsafe_allow_html=True)
 st.markdown('<div class="subheader">Contact Us or Join Us</div>', unsafe_allow_html=True)
-st.markdown('<div class="contact">If you are interested in joining our project or want to know more about our research, please contact us at:<br>Email: research@project.com<br>Phone: +1 234 567 890</div>', unsafe_allow_html=True)
+st.markdown(
+    """
+    <div class="contact">
+        If you are interested in joining our project or want to know more about our research, please contact us at:<br>
+        <span class="contact-info">Email:</span> guneetfateh07@gmail.com<br>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown('</div>', unsafe_allow_html=True)
+
+# Embedding the Google Form
+st.markdown(
+    """
+    <div class="center-content">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf69DLv-dsKwVjAN1Z8xzexk0MjMMwmh6cd3y9BkEPfqVYnAQ/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
