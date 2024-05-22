@@ -204,11 +204,4 @@ st.markdown(
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Embedding the Google Form
-st.markdown(
-    """
-    <div class="center-content" id="form-section">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHB7hv3_rJW1iEXBbbol3SuuRpjiSztxUGE25vjBRKr1WAog/viewform?embedded=true" width="640" height="1736" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.link_button("Join Us", "https://forms.gle/ck95ZhN1WX5PdF1eA")
